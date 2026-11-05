@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Exploration</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f7fa;
+    color:#333;
+}
+
+header{
+    background:#0b3d91;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    padding:20px;
+}
+
+.language-selector{
+    text-align:right;
+    margin-bottom:20px;
+}
+
+select{
+    padding:8px 12px;
+    font-size:16px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+h2{
+    margin-bottom:15px;
+    color:#0b3d91;
+}
+
+p{
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+footer{
+    margin-top:30px;
+    text-align:center;
+    padding:15px;
+    background:#0b3d91;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1 id="title">Space Exploration</h1>
+</header>
+
+<div class="container">
+
+    <div class="language-selector">
+        <select id="language">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="hi">Hindi</option>
+        </select>
+    </div>
+
+    <div class="card">
+        <h2 id="heading">Journey Beyond Earth</h2>
+
+        <p id="para1">
+            Space exploration is the discovery and investigation of outer space using telescopes, satellites, and spacecraft.
+        </p>
+
+        <p id="para2">
+            Humanity has launched missions to the Moon, Mars, and beyond, helping us understand the universe and our place within it.
+        </p>
+
+        <p id="para3">
+            Future missions aim to establish permanent bases on the Moon and eventually send humans to Mars.
+        </p>
+    </div>
+
+</div>
+
+<footer id="footer">
+    Learn More About the Universe
+</footer>
+
+<script>
+const translations = {
+
+en: {
+title: "Space Exploration",
+heading: "Journey Beyond Earth",
+para1: "Space exploration is the discovery and investigation of outer space using telescopes, satellites, and spacecraft.",
+para2: "Humanity has launched missions to the Moon, Mars, and beyond, helping us understand the universe and our place within it.",
+para3: "Future missions aim to establish permanent bases on the Moon and eventually send humans to Mars.",
+footer: "Learn More About the Universe"
+},
+
+es: {
+title: "Exploración Espacial",
+heading: "Viaje Más Allá de la Tierra",
+para1: "La exploración espacial es el descubrimiento e investigación del espacio exterior utilizando telescopios, satélites y naves espaciales.",
+para2: "La humanidad ha lanzado misiones a la Luna, Marte y más allá, ayudándonos a comprender el universo.",
+para3: "Las futuras misiones buscan establecer bases permanentes en la Luna y enviar humanos a Marte.",
+footer: "Aprende Más Sobre el Universo"
+},
+
+fr: {
+title: "Exploration Spatiale",
+heading: "Voyage Au-delà de la Terre",
+para1: "L'exploration spatiale est la découverte et l'étude de l'espace à l'aide de télescopes, satellites et engins spatiaux.",
+para2: "L'humanité a lancé des missions vers la Lune, Mars et au-delà pour mieux comprendre l'univers.",
+para3: "Les futures missions visent à établir des bases permanentes sur la Lune puis sur Mars.",
+footer: "En Savoir Plus Sur l'Univers"
+},
+
+de: {
+title: "Weltraumforschung",
+heading: "Reise Jenseits Der Erde",
+para1: "Die Weltraumforschung erforscht den Weltraum mit Teleskopen, Satelliten und Raumfahrzeugen.",
+para2: "Die Menschheit hat Missionen zum Mond, Mars und darüber hinaus gestartet.",
+para3: "Zukünftige Missionen sollen dauerhafte Basen auf dem Mond und später auf dem Mars errichten.",
+footer: "Mehr Über Das Universum Erfahren"
+},
+
+hi: {
+title: "अंतरिक्ष अन्वेषण",
+heading: "पृथ्वी से परे यात्रा",
+para1: "अंतरिक्ष अन्वेषण दूरबीनों, उपग्रहों और अंतरिक्ष यानों का उपयोग करके अंतरिक्ष का अध्ययन है।",
+para2: "मानवता ने चंद्रमा, मंगल और उससे आगे तक मिशन भेजे हैं।",
+para3: "भविष्य के मिशनों का लक्ष्य चंद्रमा और मंगल पर स्थायी ठिकाने बनाना है।",
+footer: "ब्रह्मांड के बारे में और जानें"
+}
+
+};
+
+document.getElementById("language").addEventListener("change", function() {
+
+const lang = this.value;
+
+document.getElementById("title").textContent =
+translations[lang].title;
+
+document.getElementById("heading").textContent =
+translations[lang].heading;
+
+document.getElementById("para1").textContent =
+translations[lang].para1;
+
+document.getElementById("para2").textContent =
+translations[lang].para2;
+
+document.getElementById("para3").textContent =
+translations[lang].para3;
+
+document.getElementById("footer").textContent =
+translations[lang].footer;
+
+});
+</script>
+
+</body>
+</html>
